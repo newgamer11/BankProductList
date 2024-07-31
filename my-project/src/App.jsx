@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Bankbody from './components/bank/Bankbody'
 import Bankheader from './components/bank/Bankheader'
+import BankForm from './components/bank/BankForm';
 
 //     id: self.crypto.randomUUID(),
 function App() {
@@ -37,13 +38,10 @@ function App() {
 
   return (
     <>
-      <div className='flex justify-center items-center w-full h-1/6 font-bold bg-slate-600'>
-        <h1>Bank Product List</h1>
-      </div>
-      <div className='bg-slate-600 h-full'>
-        <Bankheader categoryfilter={setcategory} setdata={setdata} />
-        <Bankbody arrays={arrayCategory()} />
-      </div>
+
+
+      <BankForm />
+
     </>
   )
 }
