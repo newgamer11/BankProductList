@@ -38,9 +38,10 @@ function App() {
 
   return (
     <>
-
-
-      <BankForm />
+      <div className='bg-slate-600 h-full'>
+        <Bankheader categoryfilter={setcategory} setdata={setdata} />
+        <Bankbody arrays={arrayCategory()} />
+      </div>
 
     </>
   )

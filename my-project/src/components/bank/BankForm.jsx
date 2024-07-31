@@ -4,6 +4,8 @@ import InputName from '../Form/InputName'
 import InputPhoneNumber from '../Form/InputPhoneNumber'
 import InputEmail from '../Form/InputEmail'
 import FormCheckboxes from '../Form/FormCheckboxes'
+import FormButton from '../Form/FormButton'
+
 
 
 
@@ -17,11 +19,7 @@ const BankForm = () => {
             <InputPhoneNumber />
             <InputEmail />
             <FormCheckboxes />
-
-            <button className='mt-10 flex justify-center items-center bg-blue-500
-             text-white font-bold py-2 px-4 rounded hover:bg-blue-700'>
-                제출하기
-            </button>
+            <FormButton />
 
         </>
     )
