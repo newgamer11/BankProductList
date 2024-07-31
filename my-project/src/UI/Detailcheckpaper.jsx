@@ -2,7 +2,7 @@ import React from 'react'
 
 const Detailcheckpaper = () => {
     return (
-        <div>Detailcheckpaper</div>
+        <><div>111</div></>
     )
 }
 
