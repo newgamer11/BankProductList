@@ -50,6 +50,7 @@ function App() {
         <Bankheader categoryfilter={setcategory} setdata={setdata} />
         <Bankbody arrays={arrayCategory()} />
       </div>
+
     </>
   )
 }

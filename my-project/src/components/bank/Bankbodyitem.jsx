@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import ReactDOM, { createPortal } from 'react-dom';
-import Detailcheckpaper from '../../UI/Detailcheckpaper';
+import { createPortal } from 'react-dom';
 import Modal from '../../UI/Modal';
+import BankForm from './BankForm';
 
 const Bankbodyitem = ({ array }) => {
     const [isopen, setopen] = useState(false);
@@ -21,7 +21,7 @@ const Bankbodyitem = ({ array }) => {
             </div>
             {isopen && createPortal(
                 <Modal>
-                    <Detailcheckpaper />
+                    <BankForm />
                 </Modal>
                 , document.body)}
         </div>
