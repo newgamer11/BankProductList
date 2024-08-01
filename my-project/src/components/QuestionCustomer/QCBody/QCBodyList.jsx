@@ -3,7 +3,7 @@ import Modal from '../../../UI/Modal';
 import { createPortal } from 'react-dom';
 import QuestionCustomerForm from '../QuestionCustomerForm';
 
-const QCBodyList = ({ list, onAdd, onUpdate, ondelete }) => {
+const QCBodyList = ({ list, onAdd, onUpdate, onDelete}) => {
     const [openModal, open] = useState(false);
     const closeModal = () => open(false);
 
@@ -19,7 +19,7 @@ const QCBodyList = ({ list, onAdd, onUpdate, ondelete }) => {
 
             <div className='flex h-10 gap-1'>
                 <button className=' bg-blue-500 w-20 text-white font-bold' onClick={() => open(true)}>수정</button>
-                <button className=' bg-blue-500 w-20 text-white font-bold' onClick={() => ondelete(list.id)}>삭제</button>
+                <button className=' bg-blue-500 w-20 text-white font-bold' onClick={() => onDelete(list.id)}>삭제</button>
             </div>
 
             {openModal && createPortal(

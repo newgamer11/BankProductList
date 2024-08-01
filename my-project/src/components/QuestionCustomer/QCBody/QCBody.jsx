@@ -8,7 +8,7 @@ const QCBody = ({ lists, onUpdate, ondelete }) => {
 
   return (
     <ul>
-      {lists.map(list => <QCBodyList list={list} key={list.id} onUpdate={onUpdate} onDelete={ondelete} />)}
+      {lists.map(list => <QCBodyList list={list} key={list.id} onUpdate={onUpdate} onDelete={ondelete}/>)}
     </ul>
 
   )

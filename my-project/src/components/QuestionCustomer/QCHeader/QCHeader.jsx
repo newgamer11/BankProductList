@@ -21,7 +21,9 @@ const QCHeader = ({ onAdd, onFilter, category }) => {
 
             {isOpen && createPortal(
                 <Modal onClose={onClose}>
-                    <QuestionCustomerForm onAdd={onAdd} onClose={onClose} />
+                    <QuestionCustomerForm onAdd={onAdd} onClose={onClose} >
+                        등록
+                    </QuestionCustomerForm>
                 </Modal>
                 , document.body
             )}

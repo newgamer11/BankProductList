@@ -51,10 +51,9 @@ const BankMain = () => {
                 category: "Loan"
             }
         ]
-
         const originarray = [...array];
         return (selectcategory !== "ALL" ? originarray.filter(array => array.category === selectcategory) : insdata ?
-            originarray.filter(array => array.title === insdata) : originarray)
+            originarray.filter(array => array.title.includes(insdata)) : originarray)
     }
 
     return (
