@@ -5,21 +5,23 @@ import InputPhoneNumber from '../Form/InputPhoneNumber'
 import InputEmail from '../Form/InputEmail'
 import FormCheckboxes from '../Form/FormCheckboxes'
 import FormButton from '../Form/FormButton'
+import CloseButton from '../Form/CloseButton'
 
 
 
 
-const BankForm = () => {
-
+const BankForm = ({ onClose, category }) => {
 
     return (
         <>
-            <FormHeader />
+            <CloseButton onClose={onClose} />
+            <FormHeader selectcategory={category}/>
             <InputName />
             <InputPhoneNumber />
             <InputEmail />
             <FormCheckboxes />
-            <FormButton />
+            <FormButton onClose={onClose} />
+
 
         </>
     )

@@ -29,8 +29,8 @@ const InputPhoneNumber = () => {
   }
 
   return (
-    <div className='flex justify-center font-bold mt-5'>
-      <label className='text-2xl w-28'>
+    <div className='flex justify-center font-bold mt-10'>
+      <label className='text-xl w-28'>
         전화번호
       </label>
       <input

@@ -1,27 +1,30 @@
 import React, { useState } from 'react'
 import { createPortal } from 'react-dom';
-import Modal from '../../UI/Modal';
-import BankForm from './BankForm';
+import Modal from '../../../UI/Modal';
+import BankForm from '../BankForm';
 
 const Bankbodyitem = ({ array }) => {
+    
     const [isopen, setopen] = useState(false);
-    const onclose = () => setopen(false);
+    const onClose = () => setopen(false);
 
     return (
         <div className='flex justify-center w-full '>
-            <div className='w-1/2 bg-white flex flex-row justify-between border-2 border-black'>
+
+            <div className='w-5/12 mt-10 bg-blue-50 flex flex-row justify-between rounded-l-lg border-none shadow-lg'>
                 <div>
                     <p>{array.title}</p>
                     <p>{array.summary}</p>
                     <p>{array.category}</p>
                 </div>
-                <button onClick={() => setopen(true)}>
-                    ⚙
+                <button className='rounded-r-lg bg-blue-500 w-20 text-white font-bold' onClick={() => setopen(true)}>
+                    신청하기
                 </button>
             </div>
+
             {isopen && createPortal(
                 <Modal>
-                    <BankForm />
+                    <BankForm onClose={onClose} category={array.category} />
                 </Modal>
                 , document.body)}
         </div>

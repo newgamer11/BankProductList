@@ -9,13 +9,13 @@ const FormHeader = ({ selectcategory }) => {
             setTitle('예금 상품 상담신청')
         } else if (selectcategory === "Saving") {
             setTitle('적금 상품 상담신청')
-        } else if (selectcategory === "Loan") {
+        } else {
             setTitle('대출 상품 상담신청')
         }
-    });
+    }, [selectcategory]);
 
     return (
-        <h1 className='flex justify-center items-center fort-bold text-5xl'>111{title}</h1>
+        <h1 className=' mt-10 flex justify-center items-center fort-bold text-5xl'>{title}</h1>
     )
 }
 

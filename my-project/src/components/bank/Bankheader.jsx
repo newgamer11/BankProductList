@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Bankheaderfilter from "./Bankheaderfilter";
+import Bankheaderfilter from "./Header/Bankheaderfilter";
 
 
 const Bankheader = ({ categoryfilter, setdata }) => {
@@ -20,8 +20,8 @@ const Bankheader = ({ categoryfilter, setdata }) => {
         <>
             <div >
                 <div className="flex flex-row justify-center">
-                    <input type="text" className="border-4 border-black" onChange={inscontent} />
-                    <button className="w-14 h-14 bg-blue-500 text-white" onClick={rslcontent}>입력</button>
+                    <input type="text" className=" w-96 rounded border-2 border-blue-400" onChange={inscontent} />
+                    <button className="w-20 h-14 p-4 ml-1 rounded bg-blue-500 text-white font-bold cursor-pointer" onClick={rslcontent}>입력</button>
                     <Bankheaderfilter categoryfilter={categoryfilter} />
                 </div>
             </div>

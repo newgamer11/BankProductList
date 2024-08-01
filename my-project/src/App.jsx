@@ -2,6 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import Bankbody from './components/bank/Bankbody'
 import Bankheader from './components/bank/Bankheader'
+import QuestionCustomer from './components/QuestionCustomer/QuestionCustomer';
+import QuestionCustomerForm from './components/QuestionCustomer/QuestionCustomerForm';
 
 //     id: self.crypto.randomUUID(),
 function App() {
@@ -39,19 +41,20 @@ function App() {
 
 
   return (
-    <>
-      <div className='bg-slate-600'>
-        <button className=' ml-10'>고객의소리</button>
+    <div className='bg-cyan-50 h-full w-full'>
+
+      <QuestionCustomer />
+
+      <div className='flex justify-center items-center w-full h-1/6 font-bold'>
+        <h1 className='text-5xl'>00은행 상품 목록</h1>
       </div>
-      <div className='flex justify-center items-center w-full h-1/6 font-bold bg-slate-600'>
-        <h1>Bank Product List</h1>
-      </div>
-      <div className='bg-slate-600 h-full'>
+
+      <div>
         <Bankheader categoryfilter={setcategory} setdata={setdata} />
         <Bankbody arrays={arrayCategory()} />
       </div>
-
-    </>
+   
+    </div>
   )
 }
 
