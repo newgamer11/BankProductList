@@ -8,24 +8,32 @@ const dummyLists = [
   {
     id: 1,
     title: '예금상담문의',
+    name: '감자',
+    email: '감자@우리.컴',
     summary: 'React를 공부한다.',
     category: 'Deposit',
   },
   {
     id: 2,
     title: '적금상담문의',
+    name: '사과',
+    email: '사과@우리.컴',
     summary: '점심을 먹는다.',
     category: 'Saving',
   },
   {
     id: 3,
     title: '대출상담문의',
+    name: '포도',
+    email: '포도@우리.컴',
     summary: '커피를 마신다.',
     category: 'Loan',
   },
   {
     id: 4,
     title: '기타상담문의',
+    name: '참외',
+    email: '참외@우리.컴',
     summary: '커피를 마신다.',
     category: 'Other',
   }
@@ -38,22 +46,22 @@ const QustionCustomerMain = () => {
 
 
   //게시판 등록기능
-  const addHandler = ({ title, summary, category }) => {
+  const addHandler = (newdata) => {
     const newList = {
       id: self.crypto.randomUUID(),
-      title,
-      summary,
-      category
+      title:newdata.title,
+      summary:newdata.summary,
+      category:newdata.category,
+      name:newdata.name,
+      email:newdata.email
     }
-
-    const updatedLists = [...Lists, newList];
-    setLists(updatedLists);
-
+    const pluslist = [...lists,newList];
+    setLists(pluslist);
   }
 
   //수정기능
   const updateHandelr = (updateList) => {
-    const updateLists = lists.map(list => list.id === updateList.id ? updateList : List)
+    const updateLists = lists.map(list => list.id === updateList.id ? updateList : list)
     setLists(updateLists);
   }
 

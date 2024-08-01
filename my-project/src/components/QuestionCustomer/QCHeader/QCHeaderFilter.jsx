@@ -10,7 +10,7 @@ const QCHeaderFilter = ({ category, onFilter }) => {
     return (
 
         <select name="Listname" id="Listname" className="cursor-pointer ml-10 w-24 h-14 p-4 
-            rounded border-2 border-blue-400" onChange={category}>
+            rounded border-2 border-blue-400" onChange={filterList} value={category}>
             <option value="ALL">ALL</option>
             <option value="Deposit">예금</option>
             <option value="Saving">적금</option>
