@@ -10,6 +10,7 @@ const Bankheaderfilter = ({ categoryfilter }) => {
             <option value="Deposit">예금</option>
             <option value="Saving">적금</option>
             <option value="Loan">대출</option>
+          
         </select>
     )
 }

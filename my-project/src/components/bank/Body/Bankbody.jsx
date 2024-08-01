@@ -1,5 +1,5 @@
 import React from 'react'
-import Bankbodyitem from './Body/Bankbodyitem'
+import Bankbodyitem from './Bankbodyitem'
 
 const Bankbody = ({ arrays }) => {
 

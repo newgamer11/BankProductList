@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Bankheaderfilter from "./Header/Bankheaderfilter";
+import Bankheaderfilter from "./Bankheaderfilter";
 
 
 const Bankheader = ({ categoryfilter, setdata }) => {

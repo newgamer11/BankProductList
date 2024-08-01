@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { createPortal } from 'react-dom';
 import Modal from '../../../UI/Modal';
-import BankForm from '../BankForm';
+import BankForm from '../../Form/BankForm';
+
 
 const Bankbodyitem = ({ array }) => {
-    
+
     const [isopen, setopen] = useState(false);
     const onClose = () => setopen(false);
 
@@ -12,10 +13,10 @@ const Bankbodyitem = ({ array }) => {
         <div className='flex justify-center w-full '>
 
             <div className='w-5/12 mt-10 bg-blue-50 flex flex-row justify-between rounded-l-lg border-none shadow-lg'>
-                <div>
+                <div className='p-2'>
                     <p>{array.title}</p>
-                    <p>{array.summary}</p>
-                    <p>{array.category}</p>
+                    <p className='mt-2'>{array.summary}</p>
+                    <p className='hidden'>{array.category}</p>
                 </div>
                 <button className='rounded-r-lg bg-blue-500 w-20 text-white font-bold' onClick={() => setopen(true)}>
                     신청하기

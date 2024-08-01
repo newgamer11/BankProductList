@@ -3,6 +3,7 @@ import React from 'react'
 const InputText = () => {
     return (
         <div className='flex flex-col justify-center font-bold mt-16'>
+
             <label className="text-xl w-28 ml-5">
                 문의 내용
             </label>
