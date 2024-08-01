@@ -4,7 +4,7 @@ import Bankbodyitem from './Bankbodyitem'
 const Bankbody = ({ arrays }) => {
 
     return (
-        <div>
+        <div className='mt-24'>
             {arrays.map(array =>
                 <Bankbodyitem key={array.id} array={array} />
             )}

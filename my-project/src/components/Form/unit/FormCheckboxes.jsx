@@ -22,7 +22,7 @@ const FormCheckboxes = () => {
 
     return (
 
-        <div className='flex flex-col mt-10 mx-20'>
+        <div className='flex flex-col mt-16 mx-20'>
             <label className='flex justify-between'>
                 (필수)개인정보 수집 및 이용
                 <div>
