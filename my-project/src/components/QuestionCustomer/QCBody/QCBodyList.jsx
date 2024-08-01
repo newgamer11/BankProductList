@@ -1,12 +1,28 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Modal from '../../../UI/Modal';
 import { createPortal } from 'react-dom';
 import QuestionCustomerForm from '../QuestionCustomerForm';
 
-const QCBodyList = ({ list, onAdd, onUpdate, onDelete}) => {
+const QCBodyList = ({ list, onAdd, onUpdate, onDelete }) => {
     const [openModal, open] = useState(false);
     const closeModal = () => open(false);
 
+
+    //esc키를 누르면 모달창이 닫히도록 하는 Effect
+    useEffect(() => {
+
+        const keyDownHandler = (event) => {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        };
+
+        window.addEventListener('keydown', keyDownHandler);
+
+        return () => {
+            window.removeEventListener('keydown', keyDownHandler);
+        };
+    }, [closeModal]);
 
     return (
         <li className='flex justify-center items-center w-full mt-8 shadow-md'>
